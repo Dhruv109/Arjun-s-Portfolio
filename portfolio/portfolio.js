@@ -71,10 +71,10 @@ const animation = () => {
       },
       "-=1"
     )
-    .from(
+    .to(
       ".left",
       {
-        opacity: 0,
+        opacity: 1,
         x: -25,
         duration: 1.5,
         ease: "power2.out",

@@ -21,6 +21,7 @@ $red-color: #ef233c;
   height: 100vh;
   display: flex;
   .left {
+    opacity: 0;
     width: 20%;
     display: flex;
     flex-direction: column;

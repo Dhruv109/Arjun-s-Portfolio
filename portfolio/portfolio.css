@@ -26,6 +26,7 @@
 }
 
 .container .left {
+  opacity: 0;
   width: 20%;
   display: -webkit-box;
   display: -ms-flexbox;
