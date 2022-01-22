@@ -1,0 +1,24 @@
+{
+  "dependencies": {
+    "dotenv": "^14.2.0",
+    "express": "^4.17.2",
+    "node-fetch": "^2.6.1"
+  },
+  "name": "arjun-portfolio",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dhruv109/Arjun-s-Portfolio.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dhruv109/Arjun-s-Portfolio/issues"
+  },
+  "homepage": "https://github.com/Dhruv109/Arjun-s-Portfolio#readme",
+  "description": ""
+}
