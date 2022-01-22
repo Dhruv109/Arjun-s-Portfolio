@@ -3,7 +3,7 @@ const fetch = require("node-fetch");
 const path = require("path");
 require("dotenv").config();
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 var public = path.join(__dirname, "public");
 app.get("/", function (req, res) {
   res.sendFile(path.join(public, "index.html"));
