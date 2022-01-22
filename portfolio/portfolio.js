@@ -1,10 +1,11 @@
 let thumbnails = [];
 let vidId = [];
+let MY_API_KEY = config.MY_API_KEY;
 const container = document.querySelector(".right");
 document.addEventListener("DOMContentLoaded", () => {
   if (sessionStorage.getItem("thumbnails") == null) {
     fetch(
-      `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=50&playlistId=UULC1fEH_IUeQHX10AfM9I4w&key=${config.MY_API_KEY}`
+      `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=50&playlistId=UULC1fEH_IUeQHX10AfM9I4w&key=${MY_API_KEY}`
     )
       .then((res) => res.json())
       .then((json) => {
