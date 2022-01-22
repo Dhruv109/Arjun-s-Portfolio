@@ -12,3 +12,43 @@ document.addEventListener("DOMContentLoaded", () => {
   vid.src = `https://www.youtube.com/embed/${id}?autoplay=1&mute=1`;
   main.appendChild(vid);
 });
+
+gsap
+  .timeline()
+  .from(".head", {
+    opacity: 0,
+    y: -25,
+    duration: 1,
+    ease: "power2.out",
+    delay: 0.5,
+  })
+  .from(
+    ".main",
+    {
+      opacity: 0,
+      y: 25,
+      duration: 1.5,
+      ease: "power2.out",
+    },
+    "-=1"
+  )
+  .from(
+    ".left",
+    {
+      opacity: 0,
+      x: -25,
+      duration: 1.5,
+      ease: "power2.out",
+    },
+    "-=1"
+  )
+  .from(
+    ".redband",
+    {
+      opacity: 0,
+      height: 0,
+      duration: 1.5,
+      ease: "power2.out",
+    },
+    "-=1"
+  );
