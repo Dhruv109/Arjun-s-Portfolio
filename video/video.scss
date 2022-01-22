@@ -66,6 +66,7 @@ h1 {
   }
 }
 .left {
+  opacity: 0;
   .name {
     font-weight: 600;
     font-size: clamp(14px, 4vw, 22px);

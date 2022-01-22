@@ -54,28 +54,35 @@ const loadVideos = () => {
 const animation = () => {
   gsap
     .timeline()
-    .from(".head", {
-      opacity: 0,
-      y: -25,
-      duration: 1,
-      ease: "power2.out",
-      delay: 0.5,
-    })
+    .fromTo(
+      ".head",
+      { y: 25 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        ease: "power2.out",
+        delay: 0.5,
+      }
+    )
     .from(
       ".right",
       {
         opacity: 0,
-        y: 25,
+        y: -25,
         duration: 1.5,
         ease: "power2.out",
       },
       "-=1"
     )
-    .to(
+    .fromTo(
       ".left",
       {
-        opacity: 1,
         x: -25,
+      },
+      {
+        opacity: 1,
+        x: 0,
         duration: 1.5,
         ease: "power2.out",
       },

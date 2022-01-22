@@ -32,11 +32,14 @@ gsap
     },
     "-=1"
   )
-  .from(
+  .fromTo(
     ".left",
     {
-      opacity: 0,
       x: -25,
+    },
+    {
+      opacity: 1,
+      x: 0,
       duration: 1.5,
       ease: "power2.out",
     },

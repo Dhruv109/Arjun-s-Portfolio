@@ -87,6 +87,10 @@ h1 {
   color: white;
 }
 
+.left {
+  opacity: 0;
+}
+
 .left .name {
   font-weight: 600;
   font-size: clamp(14px, 4vw, 22px);

@@ -15,6 +15,7 @@
   font-weight: 400;
   font-size: clamp(14px, 4vw, 22px);
   padding: 3rem;
+  opacity: 0;
 }
 
 .container {
