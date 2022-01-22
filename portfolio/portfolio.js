@@ -4,7 +4,7 @@ const container = document.querySelector(".right");
 document.addEventListener("DOMContentLoaded", () => {
   if (sessionStorage.getItem("thumbnails") == null) {
     fetch(
-      "https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=50&playlistId=UULC1fEH_IUeQHX10AfM9I4w&key=AIzaSyA_cRDgXitLm1Z10MOvu1nZqr_5tqW3kqo"
+      `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=50&playlistId=UULC1fEH_IUeQHX10AfM9I4w&key=${config.MY_API_KEY}`
     )
       .then((res) => res.json())
       .then((json) => {
