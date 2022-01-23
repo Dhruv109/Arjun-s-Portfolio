@@ -42,7 +42,7 @@ $red-color: #ef233c;
     }
     width: 65%;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 0.3rem;
     row-gap: 0.5rem;
   }
@@ -83,4 +83,64 @@ $red-color: #ef233c;
 }
 .myimg {
   opacity: 1;
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+
+    .left {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 8vh;
+      // outline: 2px solid red;
+      // background-color: orange;
+      flex-direction: row;
+      border-top: 2px solid $red-color;
+      justify-content: space-evenly;
+      z-index: 3;
+      font-size: 14px;
+      padding-top: 5px;
+      ul {
+        list-style: none;
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+      }
+      .nav {
+        font-size: 12px;
+        display: flex;
+        width: 60%;
+        justify-content: space-around;
+        padding: 0;
+        list-style: none;
+      }
+      .name {
+        width: 40%;
+      }
+    }
+    .right {
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  .right {
+    img {
+      padding-bottom: 0.5rem;
+      align-self: center;
+      justify-self: center;
+    }
+  }
+  .icons {
+    position: absolute;
+    bottom: 5px;
+    a {
+      padding-left: 10px;
+    }
+  }
 }

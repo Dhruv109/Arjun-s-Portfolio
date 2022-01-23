@@ -99,3 +99,78 @@ $red-color: #ef233c;
   opacity: 0.05;
   transform: rotate(-90deg);
 }
+@media screen and (max-width: 480px) {
+  * {
+    overflow: hidden;
+    //outline: 2px solid yellow;
+  }
+  .container {
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    p {
+      font-size: 15px;
+    }
+    .right {
+      width: 100%;
+      justify-content: center;
+    }
+    .left {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 80%;
+      height: 10vh;
+      // outline: 2px solid red;
+      // background-color: orange;
+      flex-direction: row;
+      //  border-bottom: 1px solid $red-color;
+      justify-content: space-evenly;
+      z-index: 3;
+      font-size: 14px;
+      padding-top: 20px;
+      ul {
+        list-style: none;
+        display: flex;
+        width: 80%;
+        justify-content: space-evenly;
+      }
+      .nav {
+        font-size: 12px;
+        display: flex;
+        width: 60%;
+        justify-content: center;
+        padding: 0;
+        list-style: none;
+      }
+      .name {
+        width: 30%;
+      }
+    }
+  }
+  .details {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .dleft {
+      width: 40%;
+    }
+    .dright {
+      width: 60%;
+      p {
+        font-size: 12px;
+      }
+    }
+  }
+  .icons {
+    position: absolute;
+    bottom: 5px;
+    a {
+      padding-left: 20px;
+    }
+  }
+  .watermark {
+    left: -150px;
+  }
+}

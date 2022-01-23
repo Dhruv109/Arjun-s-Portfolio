@@ -46,8 +46,8 @@
   width: 65%;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-columns: (minmax(300px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 0.3rem;
   row-gap: 0.5rem;
 }
@@ -107,5 +107,84 @@
 
 .myimg {
   opacity: 1;
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .container .left {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 8vh;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    border-top: 2px solid #ef233c;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    z-index: 3;
+    font-size: 14px;
+    padding-top: 5px;
+  }
+  .container .left ul {
+    list-style: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .container .left .nav {
+    font-size: 12px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 60%;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    padding: 0;
+    list-style: none;
+  }
+  .container .left .name {
+    width: 40%;
+  }
+  .container .right {
+    width: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .right img {
+    padding-bottom: 0.5rem;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    -ms-grid-column-align: center;
+        justify-self: center;
+  }
+  .icons {
+    position: absolute;
+    bottom: 5px;
+  }
+  .icons a {
+    padding-left: 10px;
+  }
 }
 /*# sourceMappingURL=portfolio.css.map */

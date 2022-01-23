@@ -98,4 +98,18 @@
   opacity: 1;
   letter-spacing: 4px;
 }
+
+@media screen and (max-width: 480px) {
+  * {
+    overflow: auto;
+    font-size: 12px;
+  }
+  .right h1 {
+    padding-top: 2rem;
+  }
+  .right p {
+    width: 100%;
+    text-align: center;
+  }
+}
 /*# sourceMappingURL=about.css.map */
