@@ -16,7 +16,7 @@ $red-color: #ef233c;
   height: 100vh;
   display: flex;
   .left {
-    width: 30%;
+    width: 20%;
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -27,16 +27,19 @@ $red-color: #ef233c;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    transform: translateY(-10%);
+    align-items: center;
+    // transform: translateY(-20%);
+    height: 90vh;
     h1 {
-      padding-bottom: 4rem;
+      padding-bottom: 2rem;
       font-size: clamp(22px, 10vw, 50px);
       letter-spacing: 2px;
     }
     p {
       padding-top: 20px;
       line-height: 30px;
-      width: 70%;
+      width: clamp(40ch, 70%, 90ch);
+      margin: auto;
     }
   }
 }
