@@ -89,6 +89,9 @@ h1 {
   }
 }
 @media screen and (max-width: 480px) {
+  * {
+    overflow: auto;
+  }
   .head {
     // display: none;
     font-size: 15px;

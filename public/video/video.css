@@ -118,6 +118,9 @@ h1 {
 }
 
 @media screen and (max-width: 480px) {
+  * {
+    overflow: auto;
+  }
   .head {
     font-size: 15px;
   }
