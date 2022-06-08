@@ -1,29 +1,37 @@
 gsap
   .timeline()
-  .from(".head", {
-    opacity: 0,
-    y: -25,
-    duration: 1,
-    ease: "power2.out",
-    delay: 0.5,
-  })
-  .from(
-    ".left",
+  .fromTo(
+    ".head",
+    { opacity: 0, y: 25 },
     {
-      opacity: 0,
-      x: -20,
-      duration: 1.5,
+      opacity: 1,
+      y: 0,
+      duration: 0.5,
       ease: "power2.out",
-    },
-    "-=1"
+      delay: 0.2,
+    }
   )
   .from(
     ".right",
     {
       opacity: 0,
-      y: 10,
-      duration: 1.5,
+      y: -25,
+      duration: 0.5,
       ease: "power2.out",
     },
-    "-=1.5"
+    "-=0.5"
+  )
+  .fromTo(
+    ".left",
+    {
+      opacity: 0,
+      x: -25,
+    },
+    {
+      opacity: 1,
+      x: 0,
+      duration: 0.5,
+      ease: "power2.out",
+    },
+    "-=0.5"
   );

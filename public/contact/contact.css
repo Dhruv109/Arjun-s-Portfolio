@@ -138,6 +138,11 @@
 @media screen and (max-width: 480px) {
   * {
     overflow: hidden;
+    overflow-x: hidden;
+  }
+  .head {
+    width: 60%;
+    margin: auto;
   }
   .container {
     -webkit-box-orient: vertical;
@@ -154,17 +159,15 @@
     font-size: 15px;
   }
   .container .right {
-    width: 100%;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    width: 90%;
   }
   .container .left {
-    position: fixed;
-    top: 0;
+    position: absolute;
+    bottom: 0;
     left: 0;
-    width: 80%;
-    height: 10vh;
+    width: 100%;
+    height: 11vh;
+    border-top: 2px solid red;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -182,9 +185,8 @@
     display: -ms-flexbox;
     display: flex;
     width: 80%;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
   }
   .container .left .nav {
     font-size: 12px;
@@ -206,31 +208,46 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    height: 50vh;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
   }
-  .details .dleft {
-    width: 40%;
-  }
+  .details .dleft,
   .details .dright {
-    width: 60%;
+    height: 80%;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    grid-auto-rows: 1fr;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    width: 50%;
   }
+  .details .dleft p,
   .details .dright p {
-    font-size: 12px;
+    font-size: 14px;
   }
   .icons {
     position: absolute;
     bottom: 5px;
+    margin: 10px 0;
   }
   .icons a {
     padding-left: 20px;
   }
+  body {
+    position: relative;
+    height: 100vh;
+  }
   .watermark {
-    left: -150px;
+    left: -10px;
+    font-size: 250px;
+    overflow: hidden;
   }
 }
 /*# sourceMappingURL=contact.css.map */

@@ -119,10 +119,10 @@ h1 {
 
 @media screen and (max-width: 480px) {
   .head {
-    display: none;
+    font-size: 15px;
   }
   .container {
-    height: 80vh;
+    height: 60vh;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -134,16 +134,62 @@ h1 {
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
   }
-  .container .left {
-    width: 100%;
+  .container .description {
+    color: #dadada;
   }
-  .container .left .nav ul {
+  .container .description p {
+    padding-top: 20px;
+    width: 30ch;
+  }
+  .container .icons {
+    position: absolute;
+    bottom: 5px;
+    margin: 10px 0;
+  }
+  .container .icons a {
+    padding-left: 20px;
+  }
+  .container .left {
+    position: absolute;
+    bottom: 0;
+    left: 0;
     width: 100%;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    height: 11vh;
+    border-top: 2px solid red;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    z-index: 3;
+    font-size: 14px;
+    padding-top: 20px;
+  }
+  .container .left ul {
+    list-style: none;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    width: 80%;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .container .left .nav {
+    font-size: 12px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 60%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 0;
+    list-style: none;
+  }
+  .container .left .name {
+    width: 30%;
   }
   .container .main {
     width: 100vw;
@@ -160,7 +206,7 @@ h1 {
             transform: translateX(0);
   }
   .vid {
-    width: 100%;
+    width: 90%;
     height: 30vh;
     border: none;
     z-index: 3;

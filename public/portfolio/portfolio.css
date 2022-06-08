@@ -29,6 +29,7 @@
   display: -ms-flexbox;
   display: flex;
   overflow: auto;
+  margin-bottom: 100px;
 }
 
 .container .left {
@@ -57,8 +58,8 @@
   width: 70%;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(380px, 1fr))[auto-fill];
-      grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+  -ms-grid-columns: (minmax(300px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 10px 10px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -69,7 +70,7 @@
 }
 
 .container .right img {
-  width: clamp(380px, 380px, 80%);
+  width: clamp(300px, 380px, 80%);
   -webkit-filter: brightness(80%);
           filter: brightness(80%);
   -webkit-transition: all 0.2s ease-in-out;
@@ -136,31 +137,36 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    position: relative;
+  }
+  .container .fix {
+    position: absolute;
+    top: 0%;
+    left: 0;
   }
   .container .left {
     position: fixed;
-    bottom: 0;
-    left: 0;
+    top: 89%;
     width: 100%;
-    height: 8vh;
+    height: 11vh;
+    border-top: 2px solid red;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    border-top: 2px solid #ef233c;
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
     z-index: 3;
     font-size: 14px;
-    padding-top: 5px;
+    padding-top: 20px;
   }
   .container .left ul {
     list-style: none;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    width: 100%;
+    width: 80%;
     -ms-flex-pack: distribute;
         justify-content: space-around;
   }
@@ -170,16 +176,16 @@
     display: -ms-flexbox;
     display: flex;
     width: 60%;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     padding: 0;
     list-style: none;
   }
   .container .left .name {
-    width: 40%;
+    width: 30%;
   }
   .container .right {
-    width: 100%;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -198,9 +204,10 @@
   .icons {
     position: absolute;
     bottom: 5px;
+    margin: 10px 0;
   }
   .icons a {
-    padding-left: 10px;
+    padding-left: 20px;
   }
 }
 /*# sourceMappingURL=portfolio.css.map */

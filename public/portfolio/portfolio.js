@@ -59,7 +59,7 @@ const animation = () => {
       {
         opacity: 1,
         y: 0,
-        duration: 1,
+        duration: 0.5,
         ease: "power2.out",
         delay: 0.5,
       }
@@ -69,10 +69,10 @@ const animation = () => {
       {
         opacity: 0,
         y: -25,
-        duration: 1.5,
+        duration: 0.5,
         ease: "power2.out",
       },
-      "-=1"
+      "-=0.5"
     )
     .fromTo(
       ".left",
@@ -82,9 +82,9 @@ const animation = () => {
       {
         opacity: 1,
         x: 0,
-        duration: 1.5,
+        duration: 0.5,
         ease: "power2.out",
       },
-      "-=1"
+      "-=0.5"
     );
 };
