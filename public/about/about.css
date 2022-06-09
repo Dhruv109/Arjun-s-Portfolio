@@ -34,7 +34,7 @@
 }
 
 .container .right {
-  width: 70%;
+  width: 60%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -48,7 +48,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 90vh;
+  height: 80vh;
 }
 
 .container .right h1 {
@@ -60,7 +60,7 @@
 .container .right p {
   padding-top: 20px;
   line-height: 30px;
-  width: clamp(40ch, 70%, 90ch);
+  width: clamp(20ch, 70%, 90ch);
   margin: auto;
 }
 
