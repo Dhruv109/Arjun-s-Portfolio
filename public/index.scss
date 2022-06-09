@@ -10,6 +10,7 @@ $red-color: #ef233c;
 .container {
   width: 100%;
   height: 100%;
+  position: relative;
 }
 
 video {
@@ -30,6 +31,7 @@ h3 {
 .myNav {
   display: flex;
   height: 100vh;
+  padding-bottom: 3rem;
   width: 80%;
   margin: auto;
   align-items: center;
@@ -62,18 +64,27 @@ h3 {
   }
 }
 .icons {
-  position: absolute;
-  bottom: 5%;
-  width: 100%;
-  text-align: center;
   a {
     padding: 0 1rem;
     text-decoration: none;
     color: white;
   }
 }
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 3rem;
+  .icons {
+    text-align: center;
+  }
+}
 
 @media screen and (max-width: 480px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
   .myNav {
     flex-direction: column;
     justify-content: space-evenly;
