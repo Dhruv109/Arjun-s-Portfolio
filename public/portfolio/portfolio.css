@@ -139,11 +139,6 @@
             align-items: center;
     position: relative;
   }
-  .container .fix {
-    position: absolute;
-    top: 0%;
-    left: 0;
-  }
   .container .left {
     position: fixed;
     top: 89%;
